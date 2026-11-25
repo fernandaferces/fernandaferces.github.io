@@ -46,10 +46,10 @@ nav .btn{min-height:44px;padding:0 22px;font-size:13px}
 /* Portada */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--white);padding:120px max(5vw,20px) 80px;overflow:hidden;
 background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100%)}
-.hero .photo{position:absolute;inset:0;background:var(--hero-img,none) center/cover;opacity:.55}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,25,29,.25),rgba(36,25,29,.6))}
+.hero .photo{position:absolute;inset:0;background:url("img/portada.jpg") 60% center/cover;opacity:.7}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,28,34,.55),rgba(43,28,34,.45) 50%,rgba(30,20,24,.75))}
 .hero-in{position:relative;z-index:1;max-width:980px}
-.hero h1{font-size:clamp(46px,8vw,104px);letter-spacing:-.055em;line-height:.98;margin-bottom:28px}
+.hero h1{text-shadow:0 2px 24px rgba(0,0,0,.25);font-size:clamp(46px,8vw,104px);letter-spacing:-.055em;line-height:.98;margin-bottom:28px}
 .hero p{font-size:clamp(17px,1.5vw,20px);max-width:56ch;margin:0 auto 40px;opacity:.92}
 .hero small{display:block;margin-top:22px;font-size:15px;opacity:.85}
 .ph-note{position:absolute;z-index:1;bottom:24px;left:50%;transform:translateX(-50%);font-size:13px;opacity:.6}
@@ -157,7 +157,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
     <a class="btn" href="#proyectos">Ver proyectos →</a>
     <small>Disponible para nuevas oportunidades laborales · Valencia</small>
   </div>
-  <span class="ph-note">Aquí irá tu foto de fondo</span>
 </header>
 
 <section class="band" id="sobre-mi">
