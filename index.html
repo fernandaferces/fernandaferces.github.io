@@ -104,7 +104,7 @@ background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100
 .gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(120px,13vw,170px);gap:16px;margin-top:28px}
 .gallery figure{margin:0;display:flex;flex-direction:column;min-height:0}
 .gallery .ph{flex:1;min-height:0;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,#F68C63,#B951F6);display:grid;place-items:center;text-align:center;padding:12px;color:#fff;font-size:14px}
-.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery .ph{position:relative}.gallery .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .gallery figcaption{font-size:14px;margin-top:8px}
 .g-logo{grid-column:span 4;grid-row:span 2}
 .g-perfiles{grid-column:span 2;grid-row:span 2}
@@ -238,7 +238,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
 
     <h3 class="sub reveal">Lo que diseñé</h3>
     <div class="gallery reveal">
-      <figure class="g-logo"><div class="ph">Logo y envases</div><figcaption>Logo y envases</figcaption></figure>
+      <figure class="g-logo"><div class="ph"><img src="img/aura-logo.jpg" alt="Logo de Aura-SPF: letras infladas en lila y verde lima sobre fondo naranja" loading="lazy"></div><figcaption>Logo</figcaption></figure>
       <figure class="g-perfiles"><div class="ph">Perfiles de TikTok e Instagram</div><figcaption>Perfiles de TikTok e Instagram</figcaption></figure>
       <figure class="g-humor"><div class="ph">Post de humor</div><figcaption>Post de humor</figcaption></figure>
       <figure class="g-carrusel"><div class="ph">Carrusel</div><figcaption>Carrusel</figcaption></figure>
