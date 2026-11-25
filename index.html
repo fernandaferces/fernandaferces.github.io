@@ -101,7 +101,6 @@ background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100
 .idea blockquote{margin:24px 0 0;font-family:var(--serif);font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-.01em}
 .sub{font-size:clamp(28px,3vw,38px);margin-top:clamp(56px,7vw,96px)}
 .cols.four{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:28px}
-.shot{margin:28px 0 0}.shot img{width:100%;height:auto;border-radius:14px}.shot figcaption{font-size:14px;margin-top:8px}
 .gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(120px,13vw,170px);gap:16px;margin-top:28px}
 .gallery figure{margin:0;display:flex;flex-direction:column;min-height:0}
 .gallery .ph{flex:1;min-height:0;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,#F68C63,#B951F6);display:grid;place-items:center;text-align:center;padding:12px;color:#fff;font-size:14px}
@@ -112,8 +111,10 @@ background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100
 .g-perfiles{grid-column:span 2;grid-row:span 2}
 .g-humor{grid-column:span 2;grid-row:span 2}
 .g-carrusel{grid-column:span 2;grid-row:span 2}
-.g-video{grid-column:span 2;grid-row:span 3}
-.g-bus{grid-column:span 4;grid-row:span 1}
+.g-video{grid-column:span 2;grid-row:span 4}
+.g-productos{grid-column:span 4;grid-row:span 2}
+.g-productos .ph{background:#F5F0FA}.gallery .g-productos .ph img{object-fit:contain}
+.g-bus{grid-column:span 6;grid-row:span 2}
 .g-web{grid-column:span 6;grid-row:span 2}
 .g-perfiles .ph{background:linear-gradient(150deg,#B951F6,#F68C63)}
 .g-humor .ph,.g-bus .ph{background:linear-gradient(150deg,#BEEE39,#F68C63);color:#161113}
@@ -148,7 +149,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card,.btn{transition:none}}
 
-@media(max-width:900px){.menu{display:none}.cards,.cols,.cols.four,.stats,.pods,.story{grid-template-columns:minmax(0,1fr)}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.gallery figure{grid-column:span 1!important;grid-row:span 2!important}.gallery .g-logo,.gallery .g-web,.gallery .g-bus{grid-column:span 2!important}.gallery .g-bus{grid-row:span 1!important}.card{min-height:320px}.timeline{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){.menu{display:none}.cards,.cols,.cols.four,.stats,.pods,.story{grid-template-columns:minmax(0,1fr)}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.gallery figure{grid-column:span 1!important;grid-row:span 2!important}.gallery .g-logo,.gallery .g-web,.gallery .g-bus,.gallery .g-productos{grid-column:span 2!important}.gallery .g-bus,.gallery .g-productos,.gallery .g-logo{grid-row:span 1!important}.gallery .g-video{grid-row:span 3!important}.card{min-height:320px}.timeline{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){nav .btn{display:none}.mast{white-space:normal}}
 </style>
 </head>
@@ -239,13 +240,13 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
     </div>
 
     <h3 class="sub reveal">Lo que diseñé</h3>
-    <figure class="shot reveal"><img src="img/aura-productos.jpg" alt="Línea de productos de Aura-SPF: sticks recargables, tubo de protector facial con su caja y bruma solar" width="1920" height="1080" loading="lazy"><figcaption>Línea de productos: stick recargable, protector facial y bruma solar</figcaption></figure>
     <div class="gallery reveal">
       <figure class="g-logo"><div class="ph"><img src="img/aura-logo.jpg" alt="Logo de Aura-SPF: letras infladas en lila y verde lima sobre fondo naranja" loading="lazy"></div><figcaption>Logo</figcaption></figure>
       <figure class="g-perfiles"><div class="ph">Perfiles de TikTok e Instagram</div><figcaption>Perfiles de TikTok e Instagram</figcaption></figure>
+      <figure class="g-productos"><div class="ph"><img src="img/aura-productos.jpg" alt="Línea de productos de Aura-SPF: sticks recargables, tubo de protector facial con su caja y bruma solar" loading="lazy"></div><figcaption>Línea de productos: stick recargable, protector facial y bruma solar</figcaption></figure>
+      <figure class="g-video"><div class="ph embed"><iframe src="https://drive.google.com/file/d/1MFDvkX0VR_w4bLv834RkQAapF7Y1pS1-/preview" title="Vídeo de TikTok de Aura-SPF" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div><figcaption>Vídeo de TikTok · <a href="https://drive.google.com/file/d/1MFDvkX0VR_w4bLv834RkQAapF7Y1pS1-/view" target="_blank" rel="noopener">Abrir en Drive ↗</a></figcaption></figure>
       <figure class="g-humor"><div class="ph">Post de humor</div><figcaption>Post de humor</figcaption></figure>
       <figure class="g-carrusel"><div class="ph embed"><iframe src="https://www.canva.com/design/DAHZHGy_feQ/dNlbJGsrB3MiaEHUqrNqlA/view?embed" title="Carrusel de Aura-SPF" allow="fullscreen" allowfullscreen loading="lazy"></iframe></div><figcaption>Carrusel · <a href="https://www.canva.com/design/DAHZHGy_feQ/dNlbJGsrB3MiaEHUqrNqlA/view" target="_blank" rel="noopener">Abrir en Canva ↗</a></figcaption></figure>
-      <figure class="g-video"><div class="ph embed"><iframe src="https://drive.google.com/file/d/1MFDvkX0VR_w4bLv834RkQAapF7Y1pS1-/preview" title="Vídeo de TikTok de Aura-SPF" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div><figcaption>Vídeo de TikTok · <a href="https://drive.google.com/file/d/1MFDvkX0VR_w4bLv834RkQAapF7Y1pS1-/view" target="_blank" rel="noopener">Abrir en Drive ↗</a></figcaption></figure>
       <figure class="g-bus"><div class="ph">Lona del bus</div><figcaption>Lona del bus</figcaption></figure>
       <figure class="g-web"><div class="ph">Web</div><figcaption>Web</figcaption></figure>
     </div>
