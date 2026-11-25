@@ -93,18 +93,28 @@ background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100
 .note{font-size:14px;opacity:.7;margin-top:28px}
 
 .aura{background:var(--peach)}
-.brand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,8vw,96px)}
-.brand blockquote{margin:24px 0 0;font-family:var(--serif);font-size:clamp(26px,2.6vw,34px);line-height:1.2}
-.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
-.sw{border-radius:10px;padding:56px 14px 12px;font-size:13px;line-height:1.35}
-.sw b{display:block;font-size:15px}
-.media{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(150deg,#F68C63,#B951F6);display:grid;place-items:end start;padding:18px;color:#fff;font-size:14px;overflow:hidden}
-.media img{width:100%;height:100%;object-fit:cover}
-.phones{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 16px;margin-top:40px}
-.phone{flex:0 0 clamp(190px,22vw,240px);scroll-snap-align:start}
-.phone .screen{aspect-ratio:9/16;border-radius:22px;border:6px solid var(--ink);background:linear-gradient(170deg,#fff3ea,#f3b89c);display:grid;place-items:center;text-align:center;padding:14px;font-size:13px;color:var(--muted);overflow:hidden}
-.phone .screen img{width:100%;height:100%;object-fit:cover}
-.phone p{font-size:14px;margin:10px 0 0}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);margin-top:clamp(48px,6vw,80px)}
+.story>div,.idea{border-top:1px solid var(--ink);padding-top:18px}
+.story h3,.idea h3{margin-bottom:14px}
+.big-stat{font-family:var(--serif);font-size:clamp(72px,9vw,128px);line-height:.9;margin:0 0 12px;color:#B951F6}
+.idea{margin-top:clamp(40px,5vw,64px);max-width:860px}
+.idea blockquote{margin:24px 0 0;font-family:var(--serif);font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-.01em}
+.sub{font-size:clamp(28px,3vw,38px);margin-top:clamp(56px,7vw,96px)}
+.cols.four{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:28px}
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(120px,13vw,170px);gap:16px;margin-top:28px}
+.gallery figure{margin:0;display:flex;flex-direction:column;min-height:0}
+.gallery .ph{flex:1;min-height:0;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,#F68C63,#B951F6);display:grid;place-items:center;text-align:center;padding:12px;color:#fff;font-size:14px}
+.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{font-size:14px;margin-top:8px}
+.g-logo{grid-column:span 4;grid-row:span 2}
+.g-perfiles{grid-column:span 2;grid-row:span 2}
+.g-humor{grid-column:span 2;grid-row:span 2}
+.g-carrusel{grid-column:span 2;grid-row:span 2}
+.g-video{grid-column:span 2;grid-row:span 3}
+.g-bus{grid-column:span 4;grid-row:span 1}
+.g-web{grid-column:span 6;grid-row:span 2}
+.g-perfiles .ph{background:linear-gradient(150deg,#B951F6,#F68C63)}
+.g-humor .ph,.g-bus .ph{background:linear-gradient(150deg,#BEEE39,#F68C63);color:#161113}
 
 .ian{background:var(--sand)}
 .ian .phone .screen{background:linear-gradient(170deg,#f7f3ef,#d8cdc2)}
@@ -136,8 +146,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card,.btn{transition:none}}
 
-@media(max-width:900px){.menu{display:none}.cards,.cols,.stats,.pods{grid-template-columns:minmax(0,1fr)}.card{min-height:320px}.brand,.timeline{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:600px){nav .btn{display:none}.mast{white-space:normal}.swatches{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){.menu{display:none}.cards,.cols,.cols.four,.stats,.pods,.story{grid-template-columns:minmax(0,1fr)}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.gallery figure{grid-column:span 1!important;grid-row:span 2!important}.gallery .g-logo,.gallery .g-web,.gallery .g-bus{grid-column:span 2!important}.gallery .g-bus{grid-row:span 1!important}.card{min-height:320px}.timeline{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){nav .btn{display:none}.mast{white-space:normal}}
 </style>
 </head>
 <body>
@@ -195,37 +205,49 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
 
 <section class="band aura" id="aura">
   <div class="wrap">
-    <div class="case-top"><span>Proyecto de fin de máster · 2026</span><span>Protección solar facial · Generación Z · España</span></div>
+    <div class="case-top"><span>Caso 1 · Trabajo Fin de Máster, 2026</span><span>Protector solar facial · Generación Z</span></div>
     <h2 class="mast reveal">Aura-SPF</h2>
-    <p class="lead reveal">Creé desde cero una marca ficticia de protección solar facial y diseñé su plan de lanzamiento en redes sociales para la Generación Z en España.</p>
-    <div class="cols reveal">
-      <div><h3>Diferenciarse</h3><p>Una marca atrevida y honesta frente al skincare minimalista que domina el mercado.</p></div>
-      <div><h3>Estar donde está la Gen Z</h3><p>Canales elegidos según dónde descubre marcas y cómo consume contenido esta generación.</p></div>
-      <div><h3>Amplificar</h3><p>Campaña con influencers y dermatóloga, apoyada con publicidad en redes.</p></div>
-    </div>
-    <ul class="tags reveal"><li>Investigación</li><li>Branding</li><li>Contenidos</li><li>Influencers</li><li>Publicidad</li><li>Presupuesto y KPIs</li></ul>
+    <p class="lead reveal">Plan estratégico de social media para lanzar una marca de protector solar facial dirigida a la Generación Z.</p>
 
-    <div class="brand">
+    <div class="story">
       <div class="reveal">
-        <h2>Una marca que protege tu piel y dice lo que otras callan</h2>
-        <blockquote>Tono: honestidad radical y humor con doble sentido.</blockquote>
-        <div class="swatches">
-          <div class="sw" style="background:#F68C63;color:#161113"><b>Naranja</b>Sol y energía · #F68C63</div>
-          <div class="sw" style="background:#B951F6;color:#fff"><b>Lila</b>Amor propio · #B951F6</div>
-          <div class="sw" style="background:#BEEE39;color:#161113"><b>Verde lima</b>Tecnología y filtro · #BEEE39</div>
-        </div>
+        <h3>El problema</h3>
+        <p class="big-stat">75 %</p>
+        <p>de los jóvenes españoles no usa protector solar a diario. Saben que deberían, pero les frenan la textura, el precio y la desconfianza hacia los ingredientes.</p>
       </div>
-      <div class="media reveal">Logo y envases de Aura-SPF</div>
+      <div class="reveal">
+        <h3>El reto</h3>
+        <p>No se trata de convencerlos de que se protejan, sino de conseguir que les apetezca hacerlo todos los días. Para eso creé una marca desde cero y su plan de redes sociales para el primer año.</p>
+      </div>
     </div>
 
-    <h2 class="reveal" style="margin-top:clamp(56px,8vw,96px)">Contenido que educa, entretiene y se recuerda</h2>
-    <div class="phones reveal">
-      <figure class="phone" style="margin:0"><div class="screen">Pieza 1</div><p>Educación</p></figure>
-      <figure class="phone" style="margin:0"><div class="screen">Pieza 2</div><p>Humor</p></figure>
-      <figure class="phone" style="margin:0"><div class="screen">Pieza 3</div><p>Producto</p></figure>
-      <figure class="phone" style="margin:0"><div class="screen">Pieza 4</div><p>Campaña con influencers</p></figure>
+    <div class="idea reveal">
+      <h3>La idea</h3>
+      <p>En España, las marcas no hablan del protector diario con humor. Aura-SPF sí lo hace, con honestidad y una estética de maximalismo dopamínico Y2K: mucho color, energía positiva y nostalgia de los 2000, lo contrario al minimalismo frío del cuidado de la piel.</p>
+      <p>El concepto parte del «aura» de la Generación Z, pero la marca no depende de una tendencia: su tono puede evolucionar con nuevas campañas y productos.</p>
+      <blockquote>«Protege tu piel, sube tu aura».</blockquote>
     </div>
-    <p class="note">Proyecto académico con marca ficticia.</p>
+
+    <h3 class="sub reveal">La estrategia</h3>
+    <div class="cols four reveal">
+      <div><h3>Canales</h3><p>TikTok y TikTok Shop como escaparate y tienda, e Instagram para generar confianza.</p></div>
+      <div><h3>Todo el año</h3><p>4 campañas, una por temporada, para que el protector no se quede solo en verano.</p></div>
+      <div><h3>Influencers</h3><p>Creadores parecidos al público objetivo y una dermatóloga que aporta credibilidad.</p></div>
+      <div><h3>Medición</h3><p>Objetivos y KPIs en cascada, del negocio a las redes.</p></div>
+    </div>
+
+    <h3 class="sub reveal">Lo que diseñé</h3>
+    <div class="gallery reveal">
+      <figure class="g-logo"><div class="ph">Logo y envases</div><figcaption>Logo y envases</figcaption></figure>
+      <figure class="g-perfiles"><div class="ph">Perfiles de TikTok e Instagram</div><figcaption>Perfiles de TikTok e Instagram</figcaption></figure>
+      <figure class="g-humor"><div class="ph">Post de humor</div><figcaption>Post de humor</figcaption></figure>
+      <figure class="g-carrusel"><div class="ph">Carrusel</div><figcaption>Carrusel</figcaption></figure>
+      <figure class="g-video"><div class="ph">Vídeo de TikTok</div><figcaption>Vídeo de TikTok</figcaption></figure>
+      <figure class="g-bus"><div class="ph">Lona del bus</div><figcaption>Lona del bus</figcaption></figure>
+      <figure class="g-web"><div class="ph">Web</div><figcaption>Web</figcaption></figure>
+    </div>
+    <p class="note">Proyecto académico con una marca ficticia.</p>
+    <ul class="tags reveal"><li>Estrategia de social media</li><li>Branding</li><li>Contenido para TikTok e Instagram</li><li>Marketing de influencers</li><li>KPIs</li><li>Canva</li></ul>
   </div>
 </section>
 
