@@ -56,7 +56,7 @@ background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100
 
 /* Sobre mí */
 .about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
-.portrait{aspect-ratio:4/5;border-radius:12px;background:linear-gradient(160deg,var(--stone),var(--brown));display:grid;place-items:end start;padding:20px;color:rgba(255,255,255,.75);font-size:14px;overflow:hidden}
+.portrait{aspect-ratio:4/5;border-radius:12px;background:#f4f4f4;overflow:hidden;box-shadow:0 30px 60px -30px rgba(75,52,64,.45)}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .about h2{margin-bottom:24px}
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin:32px 0 28px;padding:0;list-style:none}
@@ -161,7 +161,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:
 
 <section class="band" id="sobre-mi">
   <div class="wrap about">
-    <div class="portrait reveal">Tu foto</div>
+    <div class="portrait reveal"><img src="img/sobre-mi.jpg" alt="Fernanda Fernández mirando su móvil" width="960" height="1200" loading="lazy"></div>
     <div class="reveal">
       <h2>Hola, soy Fernanda</h2>
       <p class="lead">Soy comunicadora social y máster en Community Management y Social Media Strategy. Desde 2020 creo contenido y estrategias digitales para marcas, organizaciones sociales y marcas personales.</p>
