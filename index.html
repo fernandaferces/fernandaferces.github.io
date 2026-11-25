@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fernanda Fernández · Portafolio</title>
+<meta name="description" content="Portafolio de Fernanda Fernández: marketing digital, estrategia de social media y creación de contenido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: editorial, cálido y seguro, como una marca de estudio creativo.
+   IDEA: una revista de moda/belleza: portada a sangre, nombres de proyecto como cabeceras de revista.
+   PICTURE: portada a pantalla completa con foto oscurecida en ciruela; cada caso abre con su nombre gigante en serif.
+   COLOUR and TYPE: ciruela #4B3440, casi negro #161113, melocotón #E8C6AC, arena #EFE8E1; Inter Tight apretada + Instrument Serif.
+   LAYOUT: bandas a todo ancho que alternan oscuro y claro, contenido a 1240px, tarjetas con esquinas suaves. */
+:root{color-scheme:light;--plum:#4B3440;--ink:#161113;--peach:#E8C6AC;--sand:#EFE8E1;--stone:#CFC3B8;--brown:#5A4036;--white:#fff;--muted:#6E6266;
+--sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Instrument Serif",Georgia,serif}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--sand);color:var(--ink);font:17px/1.6 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(64px,9vw,128px) max(5vw,20px)}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.035em;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(34px,4.6vw,56px)}
+h3{font-size:22px;letter-spacing:-.02em}
+p{margin:0 0 1em}
+.lead{font-size:clamp(18px,1.6vw,21px);max-width:62ch}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 30px;background:var(--white);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:var(--white)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--peach);outline-offset:3px}
+
+/* Navegación */
+nav{position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px max(5vw,20px);color:var(--white);transition:background .3s,padding .3s}
+nav.solid{background:rgba(22,17,19,.92);backdrop-filter:blur(10px);padding-block:12px}
+.logo{font-family:var(--serif);font-size:28px;text-decoration:none;letter-spacing:-.01em}
+.menu{display:flex;gap:clamp(16px,2.6vw,40px);list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
+.menu a:hover{opacity:1}
+nav .btn{min-height:44px;padding:0 22px;font-size:13px}
+
+/* Portada */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--white);padding:120px max(5vw,20px) 80px;overflow:hidden;
+background:radial-gradient(ellipse at 50% 35%,#7a5a63 0%,#4B3440 45%,#24191d 100%)}
+.hero .photo{position:absolute;inset:0;background:var(--hero-img,none) center/cover;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,25,29,.25),rgba(36,25,29,.6))}
+.hero-in{position:relative;z-index:1;max-width:980px}
+.hero h1{font-size:clamp(46px,8vw,104px);letter-spacing:-.055em;line-height:.98;margin-bottom:28px}
+.hero p{font-size:clamp(17px,1.5vw,20px);max-width:56ch;margin:0 auto 40px;opacity:.92}
+.hero small{display:block;margin-top:22px;font-size:15px;opacity:.85}
+.ph-note{position:absolute;z-index:1;bottom:24px;left:50%;transform:translateX(-50%);font-size:13px;opacity:.6}
+
+/* Sobre mí */
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:12px;background:linear-gradient(160deg,var(--stone),var(--brown));display:grid;place-items:end start;padding:20px;color:rgba(255,255,255,.75);font-size:14px;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.about h2{margin-bottom:24px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:32px 0 28px;padding:0;list-style:none}
+.pills li{padding:12px 22px;border-radius:999px;background:var(--white);font-size:16px}
+.pills li b{font-weight:600}
+.tools{font-size:15px;color:var(--muted)}
+
+/* Proyectos */
+.work{background:var(--ink);color:var(--white)}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.work-head p{max-width:44ch;opacity:.75;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:460px;padding:28px;border-radius:14px;text-decoration:none;overflow:hidden;transition:transform .35s}
+.card:hover{transform:translateY(-6px) rotate(-.4deg)}
+.card .k{font-size:13px;letter-spacing:.04em;opacity:.8}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(40px,4vw,58px);letter-spacing:-.02em;line-height:1}
+.card .go{display:flex;justify-content:space-between;border-top:1px solid currentColor;padding-top:14px;font-size:15px;opacity:.9}
+.c1{background:var(--peach);color:var(--ink)}
+.c2{background:#BDB1A7;color:var(--ink)}
+.c3{background:var(--plum);color:var(--white)}
+
+/* Casos */
+.case-top{display:flex;justify-content:space-between;gap:16px;font-size:14px;letter-spacing:.03em;margin-bottom:12px;flex-wrap:wrap}
+.mast{font-family:var(--serif);font-weight:400;font-size:clamp(64px,15vw,210px);line-height:.85;letter-spacing:-.03em;margin:0 0 clamp(32px,5vw,64px);white-space:nowrap}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:48px}
+.cols div{border-top:1px solid currentColor;padding-top:18px}
+.cols h3{margin-bottom:10px}
+.cols p{font-size:16px;margin:0;opacity:.85}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;padding:0;list-style:none}
+.tags li{border:1px solid currentColor;border-radius:999px;padding:6px 16px;font-size:14px}
+.note{font-size:14px;opacity:.7;margin-top:28px}
+
+.aura{background:var(--peach)}
+.brand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,8vw,96px)}
+.brand blockquote{margin:24px 0 0;font-family:var(--serif);font-size:clamp(26px,2.6vw,34px);line-height:1.2}
+.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+.sw{border-radius:10px;padding:56px 14px 12px;font-size:13px;line-height:1.35}
+.sw b{display:block;font-size:15px}
+.media{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(150deg,#F68C63,#B951F6);display:grid;place-items:end start;padding:18px;color:#fff;font-size:14px;overflow:hidden}
+.media img{width:100%;height:100%;object-fit:cover}
+.phones{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 16px;margin-top:40px}
+.phone{flex:0 0 clamp(190px,22vw,240px);scroll-snap-align:start}
+.phone .screen{aspect-ratio:9/16;border-radius:22px;border:6px solid var(--ink);background:linear-gradient(170deg,#fff3ea,#f3b89c);display:grid;place-items:center;text-align:center;padding:14px;font-size:13px;color:var(--muted);overflow:hidden}
+.phone .screen img{width:100%;height:100%;object-fit:cover}
+.phone p{font-size:14px;margin:10px 0 0}
+
+.ian{background:var(--sand)}
+.ian .phone .screen{background:linear-gradient(170deg,#f7f3ef,#d8cdc2)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
+.stat{background:var(--white);border-radius:14px;padding:26px}
+.stat b{display:block;font-size:clamp(36px,4vw,52px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.stat span{font-size:15px;color:var(--muted)}
+
+.paz{background:var(--plum);color:var(--white)}
+.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:48px}
+.step{border-radius:14px;padding:28px;background:rgba(255,255,255,.07)}
+.step .yr{font-family:var(--serif);font-size:36px;line-height:1}
+.step h3{margin:14px 0 10px}
+.step p{margin:0;opacity:.85;font-size:16px}
+.pods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px}
+.pod{border-radius:14px;padding:24px;background:var(--peach);color:var(--ink);min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+.pod .k{font-size:13px;opacity:.75}
+.pod h3{font-family:var(--serif);font-weight:400;font-size:30px;letter-spacing:-.01em}
+
+/* Contacto */
+.contact{background:var(--ink);color:var(--white);text-align:center}
+.contact h2{font-size:clamp(48px,8vw,104px);letter-spacing:-.055em;margin-bottom:24px}
+.contact p{max-width:52ch;margin:0 auto 36px;opacity:.85}
+.contact .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact .mail{display:block;margin-top:22px;font-size:16px;opacity:.75}
+footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:14px;padding:28px max(5vw,20px);border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card,.btn{transition:none}}
+
+@media(max-width:900px){.menu{display:none}.cards,.cols,.stats,.pods{grid-template-columns:minmax(0,1fr)}.card{min-height:320px}.about,.brand,.timeline{grid-template-columns:minmax(0,1fr)}.portrait{max-width:420px}}
+@media(max-width:600px){nav .btn{display:none}.mast{white-space:normal}.swatches{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#inicio">Fernanda Fernández</a>
+  <ul class="menu">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="btn" href="#contacto">Hablemos</a>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="photo"></div>
+  <div class="hero-in">
+    <h1>Estrategia y contenido que conectan marcas con personas</h1>
+    <p>Soy Fernanda, comunicadora especializada en marketing digital, social media y creación de contenido. Diseño estrategias, creo piezas y gestiono comunidades.</p>
+    <a class="btn" href="#proyectos">Ver proyectos →</a>
+    <small>Disponible para nuevas oportunidades laborales · Valencia</small>
+  </div>
+  <span class="ph-note">Aquí irá tu foto de fondo</span>
+</header>
+
+<section class="band" id="sobre-mi">
+  <div class="wrap about">
+    <div class="portrait reveal">Tu foto</div>
+    <div class="reveal">
+      <h2>Hola, soy Fernanda</h2>
+      <p class="lead">Soy comunicadora social y máster en Community Management y Social Media Strategy. Desde 2020 creo contenido y estrategias digitales para marcas, organizaciones sociales y marcas personales.</p>
+      <ul class="pills">
+        <li><b>Estrategia</b> · redes con objetivos claros</li>
+        <li><b>Contenido</b> · carruseles, historias y copies</li>
+        <li><b>Gestión de redes</b> · calendarios e informes</li>
+        <li><b>Publicidad</b> · campañas en Meta Ads</li>
+      </ul>
+      <p class="tools">Herramientas: Canva · Meta Business Suite · Meta Ads</p>
+    </div>
+  </div>
+</section>
+
+<section class="band work" id="proyectos">
+  <div class="wrap">
+    <div class="work-head reveal">
+      <h2>Proyectos</h2>
+      <p>Una estrategia de lanzamiento, una marca personal que gestiono hoy y tres años de comunicación con propósito.</p>
+    </div>
+    <div class="cards">
+      <a class="card c1 reveal" href="#aura"><span class="k">Estrategia · Branding · Contenido</span><h3>Aura-SPF</h3><span class="go">Ver proyecto <span>→</span></span></a>
+      <a class="card c2 reveal" href="#ian"><span class="k">Social media · Meta Ads · Informes</span><h3>Ian Raffernau</h3><span class="go">Ver proyecto <span>→</span></span></a>
+      <a class="card c3 reveal" href="#paz"><span class="k">Comunicación · Campañas · Podcasts</span><h3>Paz y Desarrollo</h3><span class="go">Ver proyecto <span>→</span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band aura" id="aura">
+  <div class="wrap">
+    <div class="case-top"><span>Proyecto de fin de máster · 2026</span><span>Protección solar facial · Generación Z · España</span></div>
+    <h2 class="mast reveal">Aura-SPF</h2>
+    <p class="lead reveal">Creé desde cero una marca ficticia de protección solar facial y diseñé su plan de lanzamiento en redes sociales para la Generación Z en España.</p>
+    <div class="cols reveal">
+      <div><h3>Diferenciarse</h3><p>Una marca atrevida y honesta frente al skincare minimalista que domina el mercado.</p></div>
+      <div><h3>Estar donde está la Gen Z</h3><p>Canales elegidos según dónde descubre marcas y cómo consume contenido esta generación.</p></div>
+      <div><h3>Amplificar</h3><p>Campaña con influencers y dermatóloga, apoyada con publicidad en redes.</p></div>
+    </div>
+    <ul class="tags reveal"><li>Investigación</li><li>Branding</li><li>Contenidos</li><li>Influencers</li><li>Publicidad</li><li>Presupuesto y KPIs</li></ul>
+
+    <div class="brand">
+      <div class="reveal">
+        <h2>Una marca que protege tu piel y dice lo que otras callan</h2>
+        <blockquote>Tono: honestidad radical y humor con doble sentido.</blockquote>
+        <div class="swatches">
+          <div class="sw" style="background:#F68C63;color:#161113"><b>Naranja</b>Sol y energía · #F68C63</div>
+          <div class="sw" style="background:#B951F6;color:#fff"><b>Lila</b>Amor propio · #B951F6</div>
+          <div class="sw" style="background:#BEEE39;color:#161113"><b>Verde lima</b>Tecnología y filtro · #BEEE39</div>
+        </div>
+      </div>
+      <div class="media reveal">Logo y envases de Aura-SPF</div>
+    </div>
+
+    <h2 class="reveal" style="margin-top:clamp(56px,8vw,96px)">Contenido que educa, entretiene y se recuerda</h2>
+    <div class="phones reveal">
+      <figure class="phone" style="margin:0"><div class="screen">Pieza 1</div><p>Educación</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Pieza 2</div><p>Humor</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Pieza 3</div><p>Producto</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Pieza 4</div><p>Campaña con influencers</p></figure>
+    </div>
+    <p class="note">Proyecto académico con marca ficticia.</p>
+  </div>
+</section>
+
+<section class="band ian" id="ian">
+  <div class="wrap">
+    <div class="case-top"><span>Cliente actual · 2026</span><span>Asesor inmobiliario · Malvarrosa, Valencia</span></div>
+    <h2 class="mast reveal">Ian Raffernau</h2>
+    <p class="lead reveal">Gestiono las redes de Ian Raffernau, asesor inmobiliario. El objetivo es humanizar su marca personal y generar confianza en un público de 45 a 65 años, con contenido cercano y profesional que no parezca una plantilla inmobiliaria.</p>
+    <div class="cols reveal">
+      <div><h3>Planifico</h3><p>Calendario editorial mensual para Instagram y Facebook.</p></div>
+      <div><h3>Creo</h3><p>Carruseles, historias y destacadas que muestran a la persona detrás del servicio.</p></div>
+      <div><h3>Mido y promociono</h3><p>Campañas en Meta Ads e informes mensuales de resultados.</p></div>
+    </div>
+    <div class="phones reveal">
+      <figure class="phone" style="margin:0"><div class="screen">Perfil de Instagram</div><p>Perfil</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Carrusel 1</div><p>Carrusel</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Carrusel 2</div><p>Carrusel</p></figure>
+      <figure class="phone" style="margin:0"><div class="screen">Historia</div><p>Historias</p></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band paz" id="paz">
+  <div class="wrap">
+    <div class="case-top"><span>2023 – 2026</span><span>Organización de cooperación al desarrollo</span></div>
+    <h2 class="mast reveal">Paz y Desarrollo</h2>
+    <p class="lead reveal">Tres años comunicando causas sociales: empecé coordinando proyectos y talleres, y terminé dirigiendo las redes sociales y las campañas de comunicación de la organización. Gestioné la comunicación de más de 10 proyectos.</p>
+    <div class="timeline reveal">
+      <div class="step"><span class="yr">2023 – 2025</span><h3>Técnica de Educación para la Transformación Social</h3><p>Coordiné proyectos, facilité talleres y creé contenidos educativos y de comunicación.</p></div>
+      <div class="step"><span class="yr">2025 – 2026</span><h3>Responsable de Comunicación</h3><p>Dirigí las redes sociales y las campañas de comunicación de varios proyectos.</p></div>
+    </div>
+    <div class="pods reveal">
+      <div class="pod"><span class="k">Podcast · Dirección</span><h3>Podcast 1</h3><span>Escuchar →</span></div>
+      <div class="pod"><span class="k">Podcast · Dirección</span><h3>Podcast 2</h3><span>Escuchar →</span></div>
+      <div class="pod"><span class="k">Podcast · Participación</span><h3>Podcast 3</h3><span>Escuchar →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contacto">
+  <div class="wrap">
+    <h2>¿Hablamos?</h2>
+    <p>Busco una nueva oportunidad laboral en marketing digital, social media o creación de contenido.</p>
+    <div class="row">
+      <a class="btn" href="mailto:mariafernandaf731@gmail.com">Escríbeme →</a>
+      <a class="btn" href="#" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)">LinkedIn</a>
+    </div>
+    <span class="mail">mariafernandaf731@gmail.com · Valencia</span>
+  </div>
+</section>
+<footer><span>© 2026 Fernanda Fernández</span><span>Marketing digital · Social media · Contenido</span></footer>
+
+<script>
+{
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold: .12});
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('in'));
+  }
+}
+</script>
+</body>
+</html>
